@@ -1,0 +1,491 @@
+html{
+    scroll-behavior: smooth;
+}
+:root{
+    --nav-color:#475d97e3;
+    --font-color:whitesmoke;
+    --banner-color:#3367A0;
+    --contact-color:#314179;
+    --font-color-2: rgb(53, 52, 52);
+
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'SimSun';
+    font-weight: bold;
+   
+  }
+  p{
+    font-weight: normal;
+    font-size: larger;
+  }
+
+  
+  nav.navbar {
+    height: 10vh;
+    background:var(--banner-color) ;
+    width: 100%;
+    position:fixed;
+    
+  }
+  .navbar.sticky{
+    height: 10vh;
+    background: #5b78c7;
+    position: fixed;
+   
+  }
+ /* custom scroll bar */
+::-webkit-scrollbar {
+    width: 100%;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--nav-color);
+}
+::selection{
+  background: rgb(0,123,255,0.3);
+}
+  .nav-links{
+      display: flex;
+      list-style: none;
+      width: 50%;
+      height: 100%;
+      justify-content: space-around;
+      align-items: center;
+      margin-left: auto;
+  }
+  .navbar img.logo{
+      height: 10vh;
+      float: left;
+      display: fixed;
+      margin-top: 0px;
+      margin-left: 15px;
+      border-radius: 50%;
+      /* filter: grayscale(50%); */
+  }
+  .navbar a.title{
+     display: fixed;
+     float: left;
+    color: white;
+    margin-top: 15px;
+    margin-left: 18px;
+    text-decoration: none;
+    font-size: 26px;
+    font-weight: bolder;
+  
+
+  }
+  .nav-links li a{
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+  }
+  .nav-links li a::after{
+    content: "";
+    position: absolute;
+    display: block;
+    height: 0.4em;
+    width: 0%;
+    background-color:lightblue;
+    bottom: 0.5em;
+    transition: all ease-in-out 250ms;
+  }
+  .nav-links li a:hover::after {
+    width: 6%;
+  }
+  .nav-links li a:hover {
+    color: lightblue;
+  }
+  
+  /* ul.nav-links button.login{
+    background: var(--font-color);
+    color: #1d1d1d;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 0.5rem;
+    border: 0;
+    transition: all 0.5s;
+    border-radius: 13px;
+    width: auto;
+    position: relative;
+    min-width: 1px; #5b78c7
+    
+  } */
+  .myButton {
+	box-shadow: 3px 4px 0px 0px #7a8eb9;
+	background:linear-gradient(to bottom, #637aad 5%, #5972a7 100%);
+	background-color:#637aad;
+	border-radius:15px;
+	border:1px solid #314179;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+
+	font-size:16px;
+	padding:7px 11px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #7a8eb9;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #5972a7 5%, #637aad 100%);
+	background-color:#5972a7;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+
+@media screen and (max-width:868px) {
+    .line{
+        width: 30px;
+        height: 3px;
+        background: white;
+        margin:5px;
+    }
+    .navbar{
+        position: fixed;
+        width: 100%;
+    }
+    .hamburger{
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 50%;
+        transform: translate(-5%,-50%);
+        z-index: 2;
+    }
+    .navbar a.title{
+      display: fixed;
+      float: left;
+     color: white;
+     font-size: 26px;
+    font-weight: bolder;
+     margin-top: 10px;
+     margin-left: 18px;
+     text-decoration: none;
+     font-size: 24px;
+ 
+   }
+    .nav-links{
+        position: fixed;
+        background:#3367A0 ;
+
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        clip-path: circle(100px at 90% -25%);
+        -webkit-clip-path: circle(100px at 90% -25%);
+        transition: all 1s ease-out;
+        pointer-events: none;
+
+    }
+    .nav-links.open{
+        clip-path: circle(1000px at 90% -10%);
+        -webkit-clip-path: circle(1000px at 90% -10%);
+        pointer-events: all;
+    }
+    .nav-links li{
+        opacity:1 ;
+    }
+    .nav-links li a {
+        font-size: 25px;
+    }
+    .nav-links li:nth-child(1) {
+        transition: all 0.5s ease 0.2s;
+      }
+      .nav-links li:nth-child(2) {
+        transition: all 0.5s ease 0.4s;
+      }
+      .nav-links li:nth-child(3) {
+        transition: all 0.5s ease 0.6s;
+      }
+      .nav-links li:nth-child(4) {
+        transition: all 0.5s ease 0.8s;
+      }
+      .nav-links li:nth-child(5) {
+        transition: all 0.5s ease 1.0s;
+      }
+      li.fade {
+        opacity: 1;
+      }
+      section#tutorial{
+        background-color: #dbdbdb;
+        height: 1500px;
+          width: 100%;
+    }
+}
+section#banner{
+   width: 100%;
+    height: 585px;
+  
+}
+section#banner div.right-banner{
+    width: 50%;
+    height: 100%;
+    float: left;
+    background-color:#3367A0 ;
+}
+section#banner div.left-banner{
+    float:right;
+    width: 50%;
+    height: 100%;
+    background-image: url(../images/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 44%;
+    background-position-y: 40px;
+    
+    
+}
+section#banner div.right-banner h1{
+    margin-top: 20%;
+    font-weight: bolder;
+    padding: 5%;
+    font-size: xxx-large;
+    color: var(--font-color);
+}
+section#banner div.right-banner h4{
+    margin-top: 2%;
+    margin-left: 5%;
+    font-size: x-large;
+    color: var(--font-color);
+    
+}
+section#banner div.right-banner div.btn{
+    margin-top: 10%;
+    margin-left: 5%;
+}
+section#banner div.right-banner div.btn a.know{
+    margin-left: 5%;
+}
+.practice{
+    line-height:50px;
+    height:50px;
+    width:100px;
+  
+    background-color:#ffffff;
+    font-size:16px;
+    font-weight:normal;
+ 
+    border:0.5px  #848484;
+    -webkit-border-top-left-radius:19px;
+    -moz-border-radius-topleft:19px;
+    border-top-left-radius:19px;
+    -webkit-border-top-right-radius:19px;
+    -moz-border-radius-topright:19px;
+    border-top-right-radius:19px;
+    -webkit-border-bottom-left-radius:19px;
+    -moz-border-radius-bottomleft:19px;
+    border-bottom-left-radius:19px;
+    -webkit-border-bottom-right-radius:19px;
+    -moz-border-radius-bottomright:19px;
+    border-bottom-right-radius:19px;
+    -moz-box-shadow: inset 0px 0px 0px 0px #ffffff;
+    -webkit-box-shadow: inset 0px 0px 0px 0px #ffffff;
+    box-shadow: inset 0px 0px 0px 0px #ffffff;
+    text-align:center;
+    display:inline-block;
+    text-decoration:none;
+  }
+  .practice:hover{
+    background-color:rgb(226, 226, 231);
+  }
+  .know{
+    line-height:45px;
+    height:45px;
+    width:100px;
+    color:white;
+    
+    font-size:16px;
+    font-weight:normal;
+ 
+    border:2.5px solid  white;
+    -webkit-border-top-left-radius:19px;
+    -moz-border-radius-topleft:19px;
+    border-top-left-radius:19px;
+    -webkit-border-top-right-radius:19px;
+    -moz-border-radius-topright:19px;
+    border-top-right-radius:19px;
+    -webkit-border-bottom-left-radius:19px;
+    -moz-border-radius-bottomleft:19px;
+    border-bottom-left-radius:19px;
+    -webkit-border-bottom-right-radius:19px;
+    -moz-border-radius-bottomright:19px;
+    border-bottom-right-radius:19px;
+    -moz-box-shadow: inset 0px 0px 0px 0px #ffffff;
+    -webkit-box-shadow: inset 0px 0px 0px 0px #ffffff;
+    box-shadow: inset 0px 0px 0px 0px #ffffff;
+    text-align:center;
+    display:inline-block;
+    text-decoration:none;
+  }
+  .know:hover{
+    background-color:var(--font-color);
+    color: black;
+  }
+  section#about{
+      background-color: whitesmoke;
+      height: 250px;
+      width: 100%;
+  }
+  section#about h1{
+      font-size: xx-large;
+      color: rgb(53, 52, 52);
+        text-align: center;
+    padding-top: 3%;
+       
+  }
+  section#about p{
+      font-size: large;
+      color: rgb(53, 52, 52);
+      text-align: center;
+      padding: 4%;
+  }
+  section#tutorial{
+      background-color: #dbdbdb;
+      height: 1500px;
+        width: 100%;
+  }
+  section#tutorial h1{
+    font-size: xx-large;
+    color: rgb(53, 52, 52);
+    text-align: center;
+      padding-top: 3%;
+  }
+  section#tutorial div.info{
+      display: grid;
+      grid-template-rows: 321px  321px 321px 321px;
+        grid-template-columns:1fr  1fr;
+        padding: 30px;
+        
+  }
+  section#tutorial div.info div.grid-item:nth-child(1){
+     background-image: url("/images/undraw_Remote_team_re_ck1y.svg");
+     background-size: 80%;
+     background-repeat: no-repeat;
+     background-position-x:40px ;
+     background-position-y: 40px;
+     background-color: #4985C5;
+  }
+  section#tutorial div.info div.grid-item:nth-child(2){
+    background-color: whitesmoke;
+}
+section#tutorial div.info div.grid-item:nth-child(3){
+    background-color:  whitesmoke;
+}
+section#tutorial div.info div.grid-item:nth-child(4){
+    background-color: #e9e2b9;
+    background-image: url("/images/undraw_Work_chat_re_qes4.svg");
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position-x:80px ;
+    background-position-y: 40px;
+}
+section#tutorial div.info div.grid-item:nth-child(5){
+  background-image: url("/images/undraw_Accept_request_re_d81h.svg");
+  background-size: 90%;
+    background-repeat: no-repeat;
+    background-position-x: 20px;
+    background-position-y: 40px;
+  background-color: #A6808C;
+}
+section#tutorial div.info div.grid-item:nth-child(6){
+    background-color: whitesmoke;
+}
+section#tutorial div.info div.grid-item:nth-child(7){
+    background-color:whitesmoke;
+}
+section#tutorial div.info div.grid-item:nth-child(8){
+    background-color: rgb(90, 156, 179);
+    background-image: url("/images/undraw_online_information_4ui6.svg");
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position-x: 20px;
+
+}
+.practice2{
+    line-height:35px;
+    height:40px;
+    width:100px;
+    color:white;
+    margin-left: 46%;
+   
+    font-size:16px;
+    font-weight:normal;
+ 
+    border:2.5px solid  white;
+    -webkit-border-top-left-radius:19px;
+    -moz-border-radius-topleft:19px;
+    border-top-left-radius:19px;
+    -webkit-border-top-right-radius:19px;
+    -moz-border-radius-topright:19px;
+    border-top-right-radius:19px;
+    -webkit-border-bottom-left-radius:19px;
+    -moz-border-radius-bottomleft:19px;
+    border-bottom-left-radius:19px;
+    -webkit-border-bottom-right-radius:19px;
+    -moz-border-radius-bottomright:19px;
+    border-bottom-right-radius:19px;
+    -moz-box-shadow: inset 0px 0px 0px 0px #ffffff;
+    -webkit-box-shadow: inset 0px 0px 0px 0px #ffffff;
+    box-shadow: inset 0px 0px 0px 0px #ffffff;
+    text-align:center;
+    display:inline-block;
+    text-decoration:none;
+  }
+  .practice2:hover{
+    background-color:var(--font-color);
+    color: black;
+  }
+
+section#tutorial div.info div.grid-item h4{
+    text-align: center;
+    font-size: 20px;
+    padding-top: 10%;
+
+}
+
+section#tutorial div.info div.grid-item p{
+    text-align:justify;
+    font-size: 16px;
+    
+    padding: 5% 10%  10% ;
+    
+}
+
+section#contact{
+    background-color: var(--contact-color);
+    height: 360px;
+    width: 100%;
+}
+section#contact div.h{
+    height: 360px;
+    /* width: 30%; */
+    float:left;
+    width: 40%;
+}
+section#contact h1{
+    font-size: 28px;
+    color: var(--font-color);
+    text-align: center;
+    padding: 30%;
+      /* padding: 3%; */
+
+}
+
+ section#contact div.content form{
+    /* width: 70%; */
+   margin: 15px;
+    height: 360px;
+    float:right;
+    width: 40%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+} 
+
