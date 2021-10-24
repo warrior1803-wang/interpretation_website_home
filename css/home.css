@@ -364,7 +364,7 @@ section#banner div.right-banner div.btn a.know{
         
   }
   section#tutorial div.info div.grid-item:nth-child(1){
-     background-image: url("../images/undraw_Remote_team_re_ck1y.svg");
+     background-image: url("./images/undraw_Remote_team_re_ck1y.svg");
      background-size: 80%;
      background-repeat: no-repeat;
      background-position-x:40px ;
@@ -379,14 +379,14 @@ section#tutorial div.info div.grid-item:nth-child(3){
 }
 section#tutorial div.info div.grid-item:nth-child(4){
     background-color: #e9e2b9;
-    background-image: url("../images/undraw_Work_chat_re_qes4.svg");
+    background-image: url("./images/undraw_Work_chat_re_qes4.svg");
     background-size: 70%;
     background-repeat: no-repeat;
     background-position-x:80px ;
     background-position-y: 40px;
 }
 section#tutorial div.info div.grid-item:nth-child(5){
-  background-image: url("../images/undraw_Accept_request_re_d81h.svg");
+  background-image: url("./images/undraw_Accept_request_re_d81h.svg");
   background-size: 90%;
     background-repeat: no-repeat;
     background-position-x: 20px;
@@ -401,7 +401,7 @@ section#tutorial div.info div.grid-item:nth-child(7){
 }
 section#tutorial div.info div.grid-item:nth-child(8){
     background-color: rgb(90, 156, 179);
-    background-image: url("../images/undraw_online_information_4ui6.svg");
+    background-image: url("./images/undraw_online_information_4ui6.svg");
     background-size: 80%;
     background-repeat: no-repeat;
     background-position-x: 20px;
