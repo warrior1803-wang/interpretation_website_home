@@ -233,7 +233,7 @@ section#banner div.left-banner{
     float:right;
     width: 50%;
     height: 100%;
-    background-image: url(images/banner.jpg);
+    background-image: url(./images/banner.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 44%;
